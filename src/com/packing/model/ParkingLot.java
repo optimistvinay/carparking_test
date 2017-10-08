@@ -25,6 +25,9 @@ public class ParkingLot {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "SECTION_ID")
 	private ParkingSection parkingSection;
+    
+    @Column(name= "AVAILABLE")
+    private Boolean available;
 
 
 	public String getParkingLotId() {
@@ -54,6 +57,16 @@ public class ParkingLot {
 
 	public void setParkingSection(ParkingSection parkingSection) {
 		this.parkingSection = parkingSection;
+	}
+
+
+	public Boolean getAvailable() {
+		return available;
+	}
+
+
+	public void setAvailable(Boolean available) {
+		this.available = available;
 	}
     
     
